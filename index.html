@@ -59,14 +59,12 @@
         </div>
     </section>
 
-        <!-- BIG WHITE SPACER + WHO WE ARE -->
-    <div style="background-color: #ffffff; padding: 120px 0 80px; position: relative; z-index: 1;">
-        <div style="max-width: 1250px; margin: 0 auto; padding: 0 40px; text-align: center;">
-            <h2 style="font-family: 'Playfair Display', Georgia, serif; font-size: 2.8rem; color: #3f4a3f; margin-bottom: 24px;">Who We Are</h2>
-            <p style="font-size: 1.18rem; line-height: 1.75; color: #555; max-width: 720px; margin: 0 auto;">
-                Small-batch, handcrafted gifts made with love for brides and their closest people. 
-                Every piece is thoughtfully designed and personally made by Kelly in her studio.
-            </p>
+    <!-- WHO WE ARE SECTION - Moved Up & Smaller -->
+    <div class="who-we-are">
+        <div class="container">
+            <h2>Who We Are</h2>
+            <p>We are a small team who handcraft all our pieces in Kelly’s studio. We’ve always been passionate about creating beautiful gifts and we absolutely love all sorts of crafts. We take great pride in bringing every project to life.</p>
+            <p>No project is too small and we’re open to your ideas. Any questions, please feel free to ask x</p>
         </div>
     </div>
 
@@ -81,17 +79,32 @@
                 <a href="shop.html" class="btn">View All Best Sellers</a>
             </div>
 
-            <!-- Right: 3-image collage -->
-            <div class="images-side">
-                <img src="images/658860197_122162101754825236_224866196049989667_n.jpg" class="img1" alt="Top Seller 1">
-                <img src="images/669708441_122163906194825236_3881505361090547065_n.jpg" class="img2" alt="Top Seller 2">
-                <img src="images/slideshow/kelsey-chance-tAH2cA_BL5g-unsplash.jpg" class="img3" alt="Top Seller 3">
+            <!-- Right: Auto-rotating Slider -->
+            <div class="slider-container">
+                <div class="slider">
+                    <img src="images/658860197_122162101754825236_224866196049989667_n.jpg" class="slide active" alt="Top Seller 1">
+                    <img src="images/669708441_122163906194825236_3881505361090547065_n.jpg" class="slide" alt="Top Seller 2">
+                    <img src="images/slideshow/kelsey-chance-tAH2cA_BL5g-unsplash.jpg" class="slide" alt="Top Seller 3">
+                </div>
+
+                <!-- Navigation Dots -->
+                <div class="slider-dots">
+                    <span class="dot active" data-slide="0"></span>
+                    <span class="dot" data-slide="1"></span>
+                    <span class="dot" data-slide="2"></span>
+                </div>
             </div>
 
         </div>
     </section>
 
     <script src="js/index.js"></script>
-
+<!-- WhatsApp Floating Button -->
+<!-- Place an Order Button -->
+<a href="https://wa.me/447305016480?text=Hi%20Kelly%2C%20I%27d%20like%20to%20place%20an%20order" 
+   class="place-order-btn" 
+   target="_blank">
+    <span>Place an Order</span>
+</a>
 </body>
 </html>

@@ -1,9 +1,35 @@
+/* WHO WE ARE - Moved Up & Smaller */
+.who-we-are {
+    background-color: #ffffff;
+    padding: 60px 0 70px;        /* moved up + smaller */
+}
+
+.who-we-are .container {
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 0 40px;
+    text-align: center;
+}
+
+.who-we-are h2 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 2.6rem;
+    color: #3f4a3f;
+    margin-bottom: 24px;
+}
+
+.who-we-are p {
+    font-size: 1.15rem;
+    line-height: 1.75;
+    color: #555;
+    max-width: 720px;
+    margin: 0 auto 16px;
+}
+
+/* BEST SELLERS - Balanced with Who We Are */
 .best-sellers {
     background-color: #f8f5f0;
-    padding: 100px 0 120px;      /* nice clean spacing after Who We Are */
-    position: relative;
-    margin-top: 0;               /* no more pushing anything down */
-    z-index: 1;
+    padding: 80px 0 90px;
 }
 
 .best-sellers .container {
@@ -11,34 +37,33 @@
     margin: 0 auto;
     padding: 0 40px;
     display: flex;
-    align-items: flex-start;
-    gap: 90px;
+    align-items: center;
+    gap: 80px;
     flex-wrap: wrap;
 }
 
 .best-sellers .text-side {
     flex: 1;
     min-width: 340px;
-    padding-top: 40px;
 }
 
 .best-sellers .text-side h2 {
     font-family: 'Playfair Display', Georgia, serif;
-    font-size: 2.85rem;
+    font-size: 2.65rem;
     color: #3f4a3f;
-    margin-bottom: 26px;
+    margin-bottom: 20px;
 }
 
 .best-sellers .text-side p {
-    font-size: 1.2rem;
+    font-size: 1.12rem;
     line-height: 1.65;
     color: #555;
-    margin-bottom: 35px;
+    margin-bottom: 28px;
 }
 
 .best-sellers .btn {
     display: inline-block;
-    padding: 16px 42px;
+    padding: 14px 38px;
     background-color: #8fa88f;
     color: white;
     text-decoration: none;
@@ -52,71 +77,90 @@
     transform: translateY(-3px);
 }
 
-/* ====================== CLEAN CONTAINED SQUARE COLLAGE ====================== */
-.best-sellers .images-side {
+/* Slider */
+.slider-container {
     flex: 1;
     min-width: 380px;
     position: relative;
-    aspect-ratio: 1 / 1;          /* perfect square, fully contained */
-    overflow: hidden;
-}
-
-.best-sellers .images-side img {
-    position: absolute;
+    height: 390px;
     border-radius: 12px;
-    object-fit: cover;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-    transition: transform 0.4s ease;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
 }
 
-.best-sellers .images-side img:hover {
-    transform: scale(1.04);
-}
-
-/* Top-left image */
-.best-sellers .img1 {
+.slide {
+    position: absolute;
     top: 0;
     left: 0;
-    width: 49.5%;
-    height: 49.5%;
-    z-index: 2;
-}
-
-/* Bottom-left image — perfectly flush, no gap */
-.best-sellers .img3 {
-    top: 50.5%;
-    left: 0;
-    width: 49.5%;
-    height: 49.5%;
-    z-index: 1;
-}
-
-/* Tall right image — fills the full height */
-.best-sellers .img2 {
-    top: 0;
-    right: 0;
-    width: 49%;
+    width: 100%;
     height: 100%;
-    z-index: 3;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease;
 }
 
-/* ====================== MOBILE ====================== */
+.slide.active {
+    opacity: 1;
+}
+
+.slider-dots {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 10;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: #fff;
+    transform: scale(1.3);
+}
+
+/* Place an Order Button - Matching Site Green */
+.place-order-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #8fa88f;        /* Same green as your buttons */
+    color: white;
+    padding: 15px 32px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 15.5px;
+    text-decoration: none;
+    box-shadow: 0 6px 20px rgba(143, 168, 143, 0.4);
+    z-index: 1000;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    letter-spacing: 0.4px;
+}
+
+.place-order-btn:hover {
+    background-color: #7a947a;        /* Hover shade matching your other buttons */
+    transform: translateY(-3px);
+    box-shadow: 0 10px 28px rgba(143, 168, 143, 0.5);
+}
+
+.place-order-btn:active {
+    transform: scale(0.97);
+}
+
+/* Mobile */
 @media (max-width: 768px) {
-    .best-sellers {
-        padding: 60px 0 80px;
-    }
-    .best-sellers .container {
-        gap: 50px;
-        flex-direction: column;
-    }
-    .best-sellers .images-side {
-        aspect-ratio: auto;
-        height: 520px;            /* nice square on mobile too */
-    }
-    .best-sellers .images-side img {
-        position: static;
-        width: 100%;
-        height: auto;
-        margin-bottom: 20px;
+    .place-order-btn {
+        padding: 13px 26px;
+        font-size: 15px;
+        bottom: 25px;
+        right: 25px;
     }
 }
