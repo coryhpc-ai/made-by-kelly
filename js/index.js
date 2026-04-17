@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
         showSlide(currentSlide);
     }, 5000);
 
-    // Click on dots to change slide
+    // Click on dots
     dots.forEach((dot, index) => {
         dot.addEventListener('click', () => {
             currentSlide = index;

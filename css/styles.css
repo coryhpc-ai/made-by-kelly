@@ -1,0 +1,122 @@
+.best-sellers {
+    background-color: #f8f5f0;
+    padding: 100px 0 120px;      /* nice clean spacing after Who We Are */
+    position: relative;
+    margin-top: 0;               /* no more pushing anything down */
+    z-index: 1;
+}
+
+.best-sellers .container {
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 0 40px;
+    display: flex;
+    align-items: flex-start;
+    gap: 90px;
+    flex-wrap: wrap;
+}
+
+.best-sellers .text-side {
+    flex: 1;
+    min-width: 340px;
+    padding-top: 40px;
+}
+
+.best-sellers .text-side h2 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 2.85rem;
+    color: #3f4a3f;
+    margin-bottom: 26px;
+}
+
+.best-sellers .text-side p {
+    font-size: 1.2rem;
+    line-height: 1.65;
+    color: #555;
+    margin-bottom: 35px;
+}
+
+.best-sellers .btn {
+    display: inline-block;
+    padding: 16px 42px;
+    background-color: #8fa88f;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.best-sellers .btn:hover {
+    background-color: #7a947a;
+    transform: translateY(-3px);
+}
+
+/* ====================== CLEAN CONTAINED SQUARE COLLAGE ====================== */
+.best-sellers .images-side {
+    flex: 1;
+    min-width: 380px;
+    position: relative;
+    aspect-ratio: 1 / 1;          /* perfect square, fully contained */
+    overflow: hidden;
+}
+
+.best-sellers .images-side img {
+    position: absolute;
+    border-radius: 12px;
+    object-fit: cover;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: transform 0.4s ease;
+}
+
+.best-sellers .images-side img:hover {
+    transform: scale(1.04);
+}
+
+/* Top-left image */
+.best-sellers .img1 {
+    top: 0;
+    left: 0;
+    width: 49.5%;
+    height: 49.5%;
+    z-index: 2;
+}
+
+/* Bottom-left image — perfectly flush, no gap */
+.best-sellers .img3 {
+    top: 50.5%;
+    left: 0;
+    width: 49.5%;
+    height: 49.5%;
+    z-index: 1;
+}
+
+/* Tall right image — fills the full height */
+.best-sellers .img2 {
+    top: 0;
+    right: 0;
+    width: 49%;
+    height: 100%;
+    z-index: 3;
+}
+
+/* ====================== MOBILE ====================== */
+@media (max-width: 768px) {
+    .best-sellers {
+        padding: 60px 0 80px;
+    }
+    .best-sellers .container {
+        gap: 50px;
+        flex-direction: column;
+    }
+    .best-sellers .images-side {
+        aspect-ratio: auto;
+        height: 520px;            /* nice square on mobile too */
+    }
+    .best-sellers .images-side img {
+        position: static;
+        width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+    }
+}
