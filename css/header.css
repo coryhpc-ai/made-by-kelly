@@ -1,0 +1,93 @@
+/* css/header.css - Skinnier & Elegant */
+
+.header {
+    background-color: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    height: 68px;           /* Skinnier header */
+}
+
+.header-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 50px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Left & Right Navigation */
+.left-nav, .right-nav {
+    display: flex;
+    gap: 38px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Logo */
+.logo {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #3f4a3f;
+    text-decoration: none;
+    letter-spacing: 0.6px;
+}
+
+.logo span {
+    color: #8fa88f;
+}
+
+/* Navigation Links */
+.nav-menu a {
+    font-family: 'Inter', system-ui, sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    color: #333333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+    color: #8fa88f;
+}
+
+/* Dropdown */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    min-width: 200px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    padding: 10px 0;
+    z-index: 999;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 10px 22px;
+    color: #444;
+    text-decoration: none;
+    font-size: 14.8px;
+}
+
+.dropdown-content a:hover {
+    background-color: #f8f5f0;
+    color: #8fa88f;
+}
