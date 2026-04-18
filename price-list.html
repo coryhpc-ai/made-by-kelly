@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Price List | Made by Kelly</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="css\price-list.css">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="header-content">
+            <ul class="left-nav nav-menu">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../shop/shop.html">Shop</a></li>
+                <li><a href="../bridesmaid-gifts.html">Bridesmaid Gifts</a></li>
+                <li><a href="../gift-sets.html">Gift Sets</a></li>
+            </ul>
+
+            <a href="../index.html" class="logo">
+                Made by <span>Kelly</span>
+            </a>
+
+            <ul class="right-nav nav-menu">
+                <li><a href="price-list.html">Price List</a></li>
+                <li><a href="../customize.html">Customize</a></li>
+                <li><a href="../about.html">About</a></li>
+                <li><a href="../contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- PAGE TITLE -->
+    <div class="price-hero">
+        <h1>Price List</h1>
+        <p>All prices include basic personalisation • Updated April 2026</p>
+    </div>
+
+    <!-- SEARCH -->
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search items..." onkeyup="filterItems()">
+    </div>
+
+    <!-- CLOTHING & ACCESSORIES -->
+    <section class="price-section">
+        <h2 class="category-title">Clothing & Accessories</h2>
+        <div class="price-grid">
+            <div class="price-item"><span>Custom Robe</span><span class="price">£18.00</span></div>
+            <div class="price-item"><span>Personalized Slippers</span><span class="price">£9.00</span></div>
+            <div class="price-item"><span>Black Groomsman Socks</span><span class="price">£5.00</span></div>
+            <div class="price-item"><span>Navy Socks</span><span class="price">£5.50</span></div>
+            <div class="price-item"><span>Boxers</span><span class="price">£7.50</span></div>
+            <div class="price-item"><span>Scrunchies</span><span class="price">£3.50</span></div>
+            <div class="price-item"><span>Handkerchief</span><span class="price">£7.00</span></div>
+        </div>
+    </section>
+
+    <!-- DRINKWARE -->
+    <section class="price-section">
+        <h2 class="category-title">Drinkware</h2>
+        <div class="price-grid">
+            <div class="price-item"><span>Champagne Flutes</span><span class="price">£5.50</span></div>
+            <div class="price-item"><span>Black Flutes</span><span class="price">£6.00</span></div>
+            <div class="price-item"><span>White Flutes</span><span class="price">£6.00</span></div>
+            <div class="price-item"><span>Wine Glass</span><span class="price">£5.50</span></div>
+            <div class="price-item"><span>Standard Pint Glasses</span><span class="price">£6.50</span></div>
+            <div class="price-item"><span>Tall Pint Glasses</span><span class="price">£7.00</span></div>
+            <div class="price-item"><span>Shot Glasses</span><span class="price">£4.00</span></div>
+            <div class="price-item"><span>Frosted Cups</span><span class="price">£4.50</span></div>
+            <div class="price-item"><span>Clear Plastic Tumblers</span><span class="price">£6.50</span></div>
+        </div>
+    </section>
+
+    <!-- GIFTING & PACKAGING -->
+    <section class="price-section">
+        <h2 class="category-title">Gifting & Packaging</h2>
+        <div class="price-grid">
+            <div class="price-item"><span>Large Brown & White Bags</span><span class="price">£7.00</span></div>
+            <div class="price-item"><span>Clear Bags</span><span class="price">£5.00</span></div>
+            <div class="price-item"><span>Brown Bags</span><span class="price">£5.00</span></div>
+            <div class="price-item"><span>Black or White Gift Bags</span><span class="price">£5.00</span></div>
+            <div class="price-item"><span>Magnetic Boxes</span><span class="price">£12.00</span></div>
+            <div class="price-item"><span>DIY Fold Out Boxes</span><span class="price">£4.00</span></div>
+        </div>
+    </section>
+
+    <!-- BRIDAL & SPECIAL -->
+    <section class="price-section">
+        <h2 class="category-title">Bridal & Special Occasions</h2>
+        <div class="price-grid">
+            <div class="price-item"><span>Will You Be My Bridesmaid Necklace</span><span class="price">£8.00</span></div>
+            <div class="price-item"><span>Flower Girl Set</span><span class="price">£35.00</span></div>
+            <div class="price-item"><span>Flower Girl Wand</span><span class="price">£12.00</span></div>
+            <div class="price-item"><span>Will You Be My Cards</span><span class="price">£1.50</span></div>
+        </div>
+    </section>
+
+    <script src="price-list.js"></script>
+</body>
+</html>
