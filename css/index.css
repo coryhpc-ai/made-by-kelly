@@ -1,15 +1,22 @@
-/* ==================== INDEX PAGE SPECIFIC STYLES ==================== */
+/* ============================================= */
+/* INDEX.CSS - Clean Version (No Footer)        */
+/* ============================================= */
 
-/* WHO WE ARE - Fixed version */
+/* Force scrollbar */
+html {
+    overflow-y: scroll;
+}
+
+/* WHO WE ARE - WHITE */
 .who-we-are {
     background-color: #ffffff;
-    padding: 60px 0 70px;
+    padding: 50px 0 65px;
 }
 
 .who-we-are .container {
     max-width: 1250px;
     margin: 0 auto;
-    padding: 0 40px;           /* Same padding as header */
+    padding: 0 40px;
     text-align: center;
 }
 
@@ -28,32 +35,10 @@
     margin: 0 auto 16px;
 }
 
-/* Place an Order Button */
-.place-order-btn {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    background-color: #8fa88f;
-    color: white;
-    padding: 15px 32px;
-    border-radius: 50px;
-    font-weight: 600;
-    font-size: 15.5px;
-    text-decoration: none;
-    box-shadow: 0 6px 20px rgba(143, 168, 143, 0.4);
-    z-index: 1000;
-    transition: all 0.3s ease;
-}
-
-.place-order-btn:hover {
-    background-color: #7a947a;
-    transform: translateY(-3px);
-}
-
-/* Best Sellers */
+/* BEST SELLERS - BEIGE */
 .best-sellers {
-    background-color: #f8f5f0;
-    padding: 80px 0 90px;
+    background-color: #f9f7f2;
+    padding: 90px 0 100px;
 }
 
 .best-sellers .container {
@@ -150,42 +135,80 @@
     transform: scale(1.3);
 }
 
-/* Place an Order Button */
-.place-order-btn {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    background-color: #8fa88f;
-    color: white;
-    padding: 15px 32px;
-    border-radius: 50px;
-    font-weight: 600;
-    font-size: 15.5px;
-    text-decoration: none;
-    box-shadow: 0 6px 20px rgba(143, 168, 143, 0.4);
-    z-index: 1000;
-    transition: all 0.3s ease;
-    white-space: nowrap;
+/* TESTIMONIALS - WHITE */
+.testimonials {
+    background-color: #ffffff;
+    padding: 80px 0 100px;
+    text-align: center;
+    overflow: hidden;
 }
 
-.place-order-btn:hover {
-    background-color: #7a947a;
-    transform: translateY(-3px);
+.testimonials h2 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 2.8rem;
+    color: #3f4a3f;
+    margin-bottom: 10px;
 }
 
-/* Mobile */
-@media (max-width: 768px) {
-    .place-order-btn {
-        padding: 13px 26px;
-        font-size: 15px;
-        bottom: 25px;
-        right: 25px;
-    }
+.subtitle {
+    font-size: 1.15rem;
+    color: #666;
+    margin-bottom: 60px;
 }
 
-/* STRIPE PAYMENT SECTION - Pure White */
+.testimonial-slider {
+    position: relative;
+    max-width: 1220px;
+    height: 270px;
+    margin: 0 auto;
+}
+
+.testimonial-card {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    max-width: 420px;
+    background: white;
+    padding: 42px 45px;
+    border-radius: 18px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+    opacity: 0;
+    transition: all 0.95s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.testimonial-card.active {
+    left: 50%;
+    transform: translateX(-50%) scale(1.04);
+    opacity: 1;
+    z-index: 10;
+    box-shadow: 0 22px 55px rgba(0, 0, 0, 0.14);
+}
+
+.testimonial-card.left {
+    left: 7%;
+    transform: scale(0.82);
+    opacity: 0.68;
+    z-index: 5;
+}
+
+.testimonial-card.right {
+    left: 93%;
+    transform: translateX(-100%) scale(0.82);
+    opacity: 0.68;
+    z-index: 5;
+}
+
+.review {
+    font-size: 1.17rem;
+    line-height: 1.82;
+    color: #444;
+    font-style: italic;
+    margin: 0;
+}
+
+/* STRIPE PAYMENT - BEIGE */
 .stripe-payment {
-    background-color: #ffffff;     /* Pure white as requested */
+    background-color: #f9f7f2;
     padding: 100px 0 110px;
     text-align: center;
 }
@@ -215,7 +238,7 @@
 }
 
 .payment-card {
-    background: #f9f7f2;
+    background: white;
     border-radius: 16px;
     padding: 48px 38px;
     width: 100%;
@@ -274,4 +297,45 @@
     margin-top: 18px;
     font-size: 0.96rem;
     color: #777;
+}
+
+/* PLACE AN ORDER BUTTON */
+.place-order-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #8fa88f;
+    color: white;
+    padding: 15px 32px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 15.5px;
+    text-decoration: none;
+    box-shadow: 0 6px 20px rgba(143, 168, 143, 0.4);
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.place-order-btn:hover {
+    background-color: #7a947a;
+    transform: translateY(-3px);
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .best-sellers .container,
+    .payment-options {
+        gap: 30px;
+    }
+    
+    .payment-card {
+        padding: 38px 28px;
+    }
+    
+    .place-order-btn {
+        padding: 13px 26px;
+        font-size: 15px;
+        bottom: 25px;
+        right: 25px;
+    }
 }

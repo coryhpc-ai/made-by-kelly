@@ -1,0 +1,46 @@
+/* css/footer.css - Clean Minimal Footer */
+
+.footer {
+    background-color: #ffffff;
+    padding: 45px 0 40px;
+    text-align: center;
+    font-size: 0.95rem;
+    color: #777;
+    border-top: 1px solid #f0f0f0;
+}
+
+.footer .container {
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.footer p {
+    margin: 8px 0;
+}
+
+.footer a {
+    color: #8fa88f;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.made-with-love {
+    margin-top: 18px;
+    font-size: 1rem;
+    color: #8fa88f;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .footer {
+        padding: 35px 0 30px;
+    }
+    .footer p {
+        font-size: 0.92rem;
+    }
+}

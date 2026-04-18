@@ -1,0 +1,120 @@
+/* terms/terms.css */
+
+.terms-container {
+    max-width: 900px;
+    margin: 60px auto 80px;
+    padding: 0 40px;
+}
+
+.terms-container h1 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 2.8rem;
+    color: #3f4a3f;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.terms-content {
+    font-size: 1.08rem;
+    line-height: 1.85;
+    color: #444;
+    max-width: 780px;
+    margin: 0 auto;
+}
+
+.terms-content h2 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.65rem;
+    color: #3f4a3f;
+    text-align: center;           /* Centered headings */
+    margin: 50px 0 18px;
+}
+
+/* Green divider lines - matching shop green */
+.green-divider {
+    height: 2px;
+    background: linear-gradient(to right, transparent, #8fa88f, transparent);
+    margin: 45px auto;
+    width: 180px;
+}
+
+.terms-content p {
+    margin-bottom: 22px;
+}
+
+.thank-you {
+    margin-top: 60px;
+    font-style: italic;
+    text-align: center;
+    color: #555;
+}
+
+/* Contact Button - Shop Green */
+.contact-section {
+    text-align: center;
+    margin: 70px 0 40px;
+}
+
+.contact-btn {
+    display: inline-block;
+    background-color: #8fa88f;
+    color: white;
+    padding: 16px 42px;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 20px rgba(143, 168, 143, 0.3);
+}
+
+.contact-btn:hover {
+    background-color: #7a947a;
+    transform: translateY(-3px);
+}
+
+/* Footer */
+.footer {
+    background-color: #ffffff;
+    padding: 45px 0 40px;
+    text-align: center;
+    font-size: 0.95rem;
+    color: #777;
+    border-top: 1px solid #f0f0f0;
+}
+
+.footer .container {
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.footer a {
+    color: #8fa88f;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.made-with-love {
+    margin-top: 18px;
+    font-size: 1rem;
+    color: #8fa88f;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .terms-container {
+        padding: 0 25px;
+    }
+    .terms-container h1 {
+        font-size: 2.4rem;
+    }
+    .contact-btn {
+        padding: 14px 36px;
+        font-size: 1.05rem;
+    }
+}

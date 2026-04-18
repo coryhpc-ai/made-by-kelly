@@ -113,3 +113,34 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+
+
+// Testimonials Carousel - Square Style
+let currentSlide = 0;
+const testimonialSlides = document.querySelectorAll('.testimonial-card');
+
+function updateTestimonials() {
+    testimonialSlides.forEach((slide, index) => {
+        slide.classList.remove('active', 'left', 'right');
+        
+        if (index === currentSlide) {
+            slide.classList.add('active');
+        } else if (index === (currentSlide - 1 + testimonialSlides.length) % testimonialSlides.length) {
+            slide.classList.add('left');
+        } else if (index === (currentSlide + 1) % testimonialSlides.length) {
+            slide.classList.add('right');
+        }
+    });
+}
+
+function nextTestimonial() {
+    currentSlide = (currentSlide + 1) % testimonialSlides.length;
+    updateTestimonials();
+}
+
+// Auto rotate every 6 seconds
+setInterval(nextTestimonial, 6000);
+
+// Initialize
+updateTestimonials();
