@@ -1,6 +1,7 @@
+/* Shop Page Styles */
 .shop-hero {
     background-color: #f8f5f0;
-    padding: 80px 0 60px;
+    padding: 70px 0 60px;
     text-align: center;
 }
 
@@ -8,6 +9,7 @@
     font-family: 'Playfair Display', Georgia, serif;
     font-size: 3rem;
     color: #3f4a3f;
+    margin-bottom: 10px;
 }
 
 .shop-hero p {
@@ -15,6 +17,7 @@
     color: #666;
 }
 
+/* Products Grid */
 .products-grid {
     padding: 80px 0;
     background-color: #ffffff;
@@ -24,8 +27,11 @@
     max-width: 1250px;
     margin: 0 auto;
     padding: 0 40px;
+}
+
+.products-grid .container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 40px;
 }
 
@@ -33,8 +39,8 @@
     background: white;
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
-    transition: all 0.4s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
 }
 
 .product-card:hover {
@@ -44,7 +50,7 @@
 
 .product-card img {
     width: 100%;
-    height: 260px;
+    height: 280px;
     object-fit: cover;
 }
 
@@ -70,7 +76,7 @@
     font-size: 1rem;
     color: #666;
     line-height: 1.55;
-    margin-bottom: 20px;
+    margin-bottom: 22px;
 }
 
 .buy-btn {
@@ -92,53 +98,6 @@
 /* Mobile */
 @media (max-width: 768px) {
     .product-card img {
-        height: 220px;
-    }
-}
-
-
-/* Curly Animated "Made by Kelly" Logo */
-.animated-logo {
-    text-align: center;
-    margin: 40px 0 50px;
-    padding: 20px 0;
-}
-
-.animated-logo svg text {
-    fill: none;
-    stroke: #3f4a3f;
-    stroke-width: 4;
-    stroke-dasharray: 1400;
-    stroke-dashoffset: 1400;
-    animation: drawText 4.8s linear forwards;
-    font-family: 'Playfair Display', cursive;
-    font-size: 72px;
-    font-weight: 700;
-    letter-spacing: -2px;
-}
-
-/* Second animation - fill in the color after drawing */
-.animated-logo svg text {
-    animation: drawText 4.8s linear forwards,
-               fillText 0.8s 4.5s forwards;
-}
-
-@keyframes drawText {
-    to {
-        stroke-dashoffset: 0;
-    }
-}
-
-@keyframes fillText {
-    to {
-        fill: #3f4a3f;
-        stroke: none;
-    }
-}
-
-/* Mobile adjustment */
-@media (max-width: 768px) {
-    .animated-logo svg text {
-        font-size: 52px;
+        height: 240px;
     }
 }
