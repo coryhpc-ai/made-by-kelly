@@ -1,12 +1,14 @@
 /* ============================================= */
-/* INDEX.CSS - PC Normal + iPhone Balanced      */
+/* INDEX.CSS - PC Normal + iPhone Fixed (No White Gap) */
 /* ============================================= */
 
-html {
-    overflow-y: scroll;
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
 }
 
-/* HEADER - Normal PC */
+/* HEADER - Normal */
 .header {
     position: sticky;
     top: 0;
@@ -19,7 +21,7 @@ html {
     max-width: 1250px;
     margin: 0 auto;
     padding: 0 40px;
-    height: 90px;
+    height: 85px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -28,7 +30,7 @@ html {
 .nav-menu {
     display: flex;
     list-style: none;
-    gap: 28px;
+    gap: 26px;
     margin: 0;
     padding: 0;
 }
@@ -42,7 +44,7 @@ html {
 
 .logo {
     font-family: 'Playfair Display', Georgia, serif;
-    font-size: 1.75rem;
+    font-size: 1.7rem;
     color: #3f4a3f;
     text-decoration: none;
 }
@@ -51,11 +53,11 @@ html {
     color: #8fa88f;
 }
 
-/* HERO - Normal PC size (what you had before) */
+/* HERO - Smaller + Fixed for iPhone */
 .hero {
     position: relative;
-    height: 100vh;
-    min-height: 650px;
+    height: 75vh;                    /* Smaller slideshow */
+    min-height: 560px;
     overflow: hidden;
 }
 
@@ -88,14 +90,14 @@ html {
 
 .hero-content h1 {
     font-family: 'Playfair Display', Georgia, serif;
-    font-size: 3.4rem;           /* Normal large PC size */
+    font-size: 3.1rem;
     color: white;
-    line-height: 1.08;
+    line-height: 1.1;
     margin-bottom: 20px;
 }
 
 .hero-content p {
-    font-size: 1.28rem;
+    font-size: 1.25rem;
     color: white;
     max-width: 720px;
     margin: 0 auto 30px;
@@ -118,10 +120,19 @@ html {
     transform: translateY(-3px);
 }
 
-/* Other sections - PC normal */
+/* Other sections */
 .who-we-are {
     background-color: #ffffff;
     padding: 55px 0 70px;
+}
+
+.who-we-are .container,
+.best-sellers .container,
+.testimonials .container,
+.stripe-payment .container {
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 0 40px;
 }
 
 .who-we-are h2,
@@ -136,16 +147,6 @@ html {
 .best-sellers {
     background-color: #f9f7f2;
     padding: 90px 0 100px;
-}
-
-.best-sellers .container {
-    max-width: 1250px;
-    margin: 0 auto;
-    padding: 0 40px;
-    display: flex;
-    align-items: center;
-    gap: 80px;
-    flex-wrap: wrap;
 }
 
 .best-sellers .text-side {
@@ -173,7 +174,7 @@ html {
     flex: 1;
     min-width: 380px;
     position: relative;
-    height: 390px;
+    height: 360px;
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
@@ -263,9 +264,7 @@ html {
     transform: translateY(-3px);
 }
 
-/* ============================================= */
-/* MOBILE ONLY - iPhone Fixed                   */
-/* ============================================= */
+/* MOBILE - iPhone Fixed (no white gap when scrolling) */
 @media (max-width: 768px) {
     .header-content {
         padding: 0 15px;
@@ -281,7 +280,11 @@ html {
         font-size: 1.5rem;
     }
     
-    /* Hero - Balanced on iPhone */
+    .hero {
+        height: 85vh;               /* Better for iPhone */
+        min-height: 520px;
+    }
+    
     .hero-content h1 {
         font-size: 2.25rem;
         line-height: 1.15;
@@ -296,7 +299,6 @@ html {
         font-size: 1.05rem;
     }
     
-    /* Section headings on mobile */
     .who-we-are h2,
     .best-sellers .text-side h2,
     .testimonials h2,
@@ -318,7 +320,7 @@ html {
     }
     
     .slider-container {
-        height: 320px;
+        height: 300px;
         min-width: 100%;
     }
     
