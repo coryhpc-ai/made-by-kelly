@@ -1,5 +1,5 @@
 /* ============================================= */
-/* INDEX.CSS - PC Normal + iPhone Fixed (No White Gap) */
+/* INDEX.CSS - Proper Scaling + Zoom Friendly   */
 /* ============================================= */
 
 html, body {
@@ -8,7 +8,7 @@ html, body {
     overflow-x: hidden;
 }
 
-/* HEADER - Normal */
+/* HEADER */
 .header {
     position: sticky;
     top: 0;
@@ -53,11 +53,12 @@ html, body {
     color: #8fa88f;
 }
 
-/* HERO - Smaller + Fixed for iPhone */
+/* HERO - Fixed Scaling Issue */
 .hero {
     position: relative;
-    height: 75vh;                    /* Smaller slideshow */
+    height: 100vh;                    /* Use 100vh for proper scaling */
     min-height: 560px;
+    max-height: 820px;                /* Prevent it becoming too tall */
     overflow: hidden;
 }
 
@@ -264,7 +265,7 @@ html, body {
     transform: translateY(-3px);
 }
 
-/* MOBILE - iPhone Fixed (no white gap when scrolling) */
+/* MOBILE - Proper Scaling & No White Gap */
 @media (max-width: 768px) {
     .header-content {
         padding: 0 15px;
@@ -281,7 +282,7 @@ html, body {
     }
     
     .hero {
-        height: 85vh;               /* Better for iPhone */
+        height: 85vh;               /* Better scaling on iPhone */
         min-height: 520px;
     }
     
