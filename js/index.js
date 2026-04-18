@@ -95,3 +95,21 @@ document.addEventListener('DOMContentLoaded', () => {
     showSlide(0);
     startAutoRotate();
 });
+
+// Stripe Pay Button
+document.addEventListener('DOMContentLoaded', () => {
+    const payBtn = document.getElementById('stripe-pay-btn');
+    
+    if (payBtn) {
+        payBtn.addEventListener('click', async (e) => {
+            e.preventDefault();
+            
+            const stripe = Stripe('pk_test_51TNEUPF3UWQSLmNchWrqleDKKFTeWXk6V8o9ZNzYPrW7DLoNwyS2GkAukaCCJQ0aycoPCI7QkngYV8KF6P1Ls5OE007O85rj0m');
+
+            // For now, we'll use a simple redirect to Stripe Checkout
+            // Later we can make it dynamic with amount etc.
+            window.location.href = "https://buy.stripe.com/test_your_link_here"; 
+            // ← Replace this with your actual Stripe Payment Link
+        });
+    }
+});

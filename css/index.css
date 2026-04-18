@@ -1,0 +1,184 @@
+/* ==================== INDEX PAGE SPECIFIC STYLES ==================== */
+
+/* WHO WE ARE - Fixed version */
+.who-we-are {
+    background-color: #ffffff;
+    padding: 60px 0 70px;
+}
+
+.who-we-are .container {
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 0 40px;           /* Same padding as header */
+    text-align: center;
+}
+
+.who-we-are h2 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 2.6rem;
+    color: #3f4a3f;
+    margin-bottom: 24px;
+}
+
+.who-we-are p {
+    font-size: 1.15rem;
+    line-height: 1.75;
+    color: #555;
+    max-width: 720px;
+    margin: 0 auto 16px;
+}
+
+/* Place an Order Button */
+.place-order-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #8fa88f;
+    color: white;
+    padding: 15px 32px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 15.5px;
+    text-decoration: none;
+    box-shadow: 0 6px 20px rgba(143, 168, 143, 0.4);
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.place-order-btn:hover {
+    background-color: #7a947a;
+    transform: translateY(-3px);
+}
+
+/* Best Sellers */
+.best-sellers {
+    background-color: #f8f5f0;
+    padding: 80px 0 90px;
+}
+
+.best-sellers .container {
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    flex-wrap: wrap;
+}
+
+.best-sellers .text-side {
+    flex: 1;
+    min-width: 340px;
+}
+
+.best-sellers .text-side h2 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 2.65rem;
+    color: #3f4a3f;
+    margin-bottom: 20px;
+}
+
+.best-sellers .text-side p {
+    font-size: 1.12rem;
+    line-height: 1.65;
+    color: #555;
+    margin-bottom: 28px;
+}
+
+.best-sellers .btn {
+    display: inline-block;
+    padding: 14px 38px;
+    background-color: #8fa88f;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.best-sellers .btn:hover {
+    background-color: #7a947a;
+    transform: translateY(-3px);
+}
+
+/* Slider */
+.slider-container {
+    flex: 1;
+    min-width: 380px;
+    position: relative;
+    height: 390px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+.slider-dots {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 10;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: #fff;
+    transform: scale(1.3);
+}
+
+/* Place an Order Button */
+.place-order-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #8fa88f;
+    color: white;
+    padding: 15px 32px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 15.5px;
+    text-decoration: none;
+    box-shadow: 0 6px 20px rgba(143, 168, 143, 0.4);
+    z-index: 1000;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.place-order-btn:hover {
+    background-color: #7a947a;
+    transform: translateY(-3px);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .place-order-btn {
+        padding: 13px 26px;
+        font-size: 15px;
+        bottom: 25px;
+        right: 25px;
+    }
+}

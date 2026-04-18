@@ -1,0 +1,144 @@
+.shop-hero {
+    background-color: #f8f5f0;
+    padding: 80px 0 60px;
+    text-align: center;
+}
+
+.shop-hero h1 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 3rem;
+    color: #3f4a3f;
+}
+
+.shop-hero p {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+.products-grid {
+    padding: 80px 0;
+    background-color: #ffffff;
+}
+
+.container {
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 0 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.product-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    transition: all 0.4s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+}
+
+.product-card img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+}
+
+.product-info {
+    padding: 24px;
+    text-align: center;
+}
+
+.product-info h3 {
+    font-size: 1.4rem;
+    margin-bottom: 8px;
+    color: #3f4a3f;
+}
+
+.price {
+    font-size: 1.35rem;
+    font-weight: 600;
+    color: #8fa88f;
+    margin-bottom: 12px;
+}
+
+.description {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.55;
+    margin-bottom: 20px;
+}
+
+.buy-btn {
+    display: inline-block;
+    background-color: #8fa88f;
+    color: white;
+    padding: 12px 32px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.buy-btn:hover {
+    background-color: #7a947a;
+    transform: translateY(-2px);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .product-card img {
+        height: 220px;
+    }
+}
+
+
+/* Curly Animated "Made by Kelly" Logo */
+.animated-logo {
+    text-align: center;
+    margin: 40px 0 50px;
+    padding: 20px 0;
+}
+
+.animated-logo svg text {
+    fill: none;
+    stroke: #3f4a3f;
+    stroke-width: 4;
+    stroke-dasharray: 1400;
+    stroke-dashoffset: 1400;
+    animation: drawText 4.8s linear forwards;
+    font-family: 'Playfair Display', cursive;
+    font-size: 72px;
+    font-weight: 700;
+    letter-spacing: -2px;
+}
+
+/* Second animation - fill in the color after drawing */
+.animated-logo svg text {
+    animation: drawText 4.8s linear forwards,
+               fillText 0.8s 4.5s forwards;
+}
+
+@keyframes drawText {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes fillText {
+    to {
+        fill: #3f4a3f;
+        stroke: none;
+    }
+}
+
+/* Mobile adjustment */
+@media (max-width: 768px) {
+    .animated-logo svg text {
+        font-size: 52px;
+    }
+}
