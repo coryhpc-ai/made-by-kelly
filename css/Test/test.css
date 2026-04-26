@@ -1,0 +1,159 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+/* ================= HEADER ================= */
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: white;
+    border-bottom: 1px solid #eee;
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: auto;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.logo span {
+    color: #8fa88f;
+}
+
+.hamburger {
+    font-size: 26px;
+    cursor: pointer;
+}
+
+/* ================= SIDE MENU ================= */
+
+.side-menu {
+    position: fixed;
+    top: 0;
+    right: -280px;
+    width: 280px;
+    height: 100vh;
+    background: white;
+    box-shadow: -10px 0 30px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    padding-top: 80px;
+    transition: 0.3s ease;
+    z-index: 2000;
+}
+
+.side-menu a {
+    padding: 15px 25px;
+    text-decoration: none;
+    color: #333;
+    border-bottom: 1px solid #f2f2f2;
+}
+
+.side-menu a:hover {
+    background: #f9f7f2;
+}
+
+/* ACTIVE STATE */
+.side-menu.active {
+    right: 0;
+}
+
+/* ================= OVERLAY ================= */
+
+.overlay-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s ease;
+    z-index: 1500;
+}
+
+.overlay-bg.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+/* ================= HERO ================= */
+
+.hero {
+    height: 80vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: 1s ease;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+.overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+
+.overlay-text h1 {
+    font-size: 3rem;
+}
+
+.overlay-text p {
+    margin: 10px 0;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 12px 24px;
+    background: #8fa88f;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px) {
+    .overlay-text h1 {
+        font-size: 1.8rem;
+    }
+
+    .overlay-text p {
+        font-size: 14px;
+    }
+}
