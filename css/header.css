@@ -1,4 +1,6 @@
-/* css/header.css - Skinnier & Elegant */
+/* ============================================= */
+/* HEADER.CSS - Fixed Height + No Expansion     */
+/* ============================================= */
 
 .header {
     background-color: #ffffff;
@@ -6,7 +8,10 @@
     position: sticky;
     top: 0;
     z-index: 1000;
-    height: 68px;           /* Skinnier header */
+    height: 68px;           /* Fixed height */
+    min-height: 68px;       /* Prevents growing */
+    overflow: hidden;       /* Important fix */
+    transition: all 0.3s ease;
 }
 
 .header-content {
@@ -20,12 +25,18 @@
 }
 
 /* Left & Right Navigation */
-.left-nav, .right-nav {
+.left-nav,
+.right-nav {
     display: flex;
     gap: 38px;
     list-style: none;
     margin: 0;
     padding: 0;
+}
+
+.left-nav li,
+.right-nav li {
+    margin: 0;
 }
 
 /* Logo */
@@ -56,38 +67,82 @@
     color: #8fa88f;
 }
 
-/* Dropdown */
-.dropdown {
-    position: relative;
-}
-
-.dropdown-content {
+/* Burger */
+.burger-menu {
     display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    margin-left: 15px;
+}
+
+.burger-menu span {
+    width: 26px;
+    height: 3px;
+    background: #333;
+    transition: all 0.3s ease;
+}
+
+/* MOBILE MENU - Completely separate */
+.mobile-menu {
+    display: none;
+    background: #ffffff;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
     position: absolute;
-    top: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    background: white;
-    min-width: 200px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-    border-radius: 8px;
-    padding: 10px 0;
+    top: 68px;
+    left: 0;
+    width: 100%;
     z-index: 999;
+    padding-bottom: 30px;
 }
 
-.dropdown:hover .dropdown-content {
-    display: block;
+.mobile-menu ul {
+    list-style: none;
+    padding: 20px 50px;
+    margin: 0;
 }
 
-.dropdown-content a {
-    display: block;
-    padding: 10px 22px;
-    color: #444;
+.mobile-menu a {
+    font-size: 1.25rem;
+    color: #333;
     text-decoration: none;
-    font-size: 14.8px;
+    display: block;
+    padding: 12px 0;
 }
 
-.dropdown-content a:hover {
-    background-color: #f8f5f0;
-    color: #8fa88f;
+/* Burger Animation */
+.burger-menu.active span:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+}
+.burger-menu.active span:nth-child(2) {
+    opacity: 0;
+}
+.burger-menu.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+    .left-nav,
+    .right-nav {
+        display: none;
+    }
+    .burger-menu {
+        display: flex;
+    }
+    .mobile-menu.active {
+        display: block;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-content {
+        padding: 0 25px;
+    }
+    .logo {
+        font-size: 22px;
+    }
 }

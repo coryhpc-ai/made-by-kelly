@@ -144,3 +144,21 @@ setInterval(nextTestimonial, 6000);
 
 // Initialize
 updateTestimonials();
+// Mobile Menu
+const burger = document.getElementById('burger');
+const mobileMenu = document.getElementById('mobileMenu');
+
+if (burger && mobileMenu) {
+    burger.addEventListener('click', () => {
+        burger.classList.toggle('active');
+        mobileMenu.classList.toggle('active');
+    });
+
+    // Close menu when clicking a link
+    document.querySelectorAll('.mobile-menu a').forEach(link => {
+        link.addEventListener('click', () => {
+            burger.classList.remove('active');
+            mobileMenu.classList.remove('active');
+        });
+    });
+}
