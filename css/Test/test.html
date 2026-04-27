@@ -3,73 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Header + Side Menu Test</title>
+    <title>Header Test</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    
+    <style>
+        /* === STRONG HEADER CSS === */
+        .header {
+            background-color: #ffffff;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+            position: sticky;
+            top: 0;
+            z-index: 9999;
+            height: 68px;
+            min-height: 68px;
+            width: 100%;
+        }
 
-    <link rel="stylesheet" href="test.css">
+        .header-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 40px;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .left-nav, .right-nav {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            align-items: center;
+        }
+
+        .nav-menu a {
+            font-family: 'Inter', system-ui, sans-serif;
+            font-size: 15px;
+            font-weight: 500;
+            color: #333333;
+            text-decoration: none;
+            white-space: nowrap;
+        }
+
+        .nav-menu a:hover {
+            color: #8fa88f;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: #3f4a3f;
+            text-decoration: none;
+            letter-spacing: 0.6px;
+            white-space: nowrap;
+        }
+
+        .logo span {
+            color: #8fa88f;
+        }
+
+        /* Mobile */
+        @media (max-width: 768px) {
+            .left-nav, .right-nav { display: none; }
+            .logo { font-size: 22px; }
+        }
+    </style>
 </head>
 <body>
 
-<!-- HEADER -->
-<header class="header">
+    <!-- HEADER ONLY -->
+    <header class="header">
+        <div class="header-content">
+            <ul class="left-nav nav-menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">Bridesmaid Gifts</a></li>
+                <li><a href="#">Gift Sets</a></li>
+            </ul>
 
-    <div class="header-content">
-        <div class="logo">
-            Made by <span>Kelly</span>
+            <a href="#" class="logo">
+                Made by <span>Kelly</span>
+            </a>
+
+            <ul class="right-nav nav-menu">
+                <li><a href="#">Price List</a></li>
+                <li><a href="#">Customize</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
         </div>
+    </header>
 
-        <div class="hamburger" id="hamburger">☰</div>
+    <div style="padding: 50px; text-align: center; font-family: Arial;">
+        <h2>This is a test page with ONLY the header</h2>
+        <p>Compare this header with your index page and shop page.</p>
+        <p>If this looks good, the problem is in how shop.css is overriding the header.</p>
     </div>
-
-</header>
-
-<!-- OVERLAY -->
-<div class="overlay-bg" id="overlay"></div>
-
-<!-- SIDE MENU -->
-<div class="side-menu" id="sideMenu">
-    <a href="#">Home</a>
-    <a href="#">Shop</a>
-    <a href="#">Bridesmaid Gifts</a>
-    <a href="#">Gift Sets</a>
-    <a href="#">Price List</a>
-    <a href="#">Customize</a>
-    <a href="#">About</a>
-    <a href="#">Contact</a>
-</div>
-
-<!-- HERO -->
-<section class="hero">
-
-    <div class="slide active" style="background-image:url('https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9');"></div>
-    <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1523438097201-512ae7d59c7b');"></div>
-    <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1519741497674-611481863552');"></div>
-
-    <div class="overlay-text">
-        <h1>Handcrafted Gifts</h1>
-        <p>Test mobile + desktop layout</p>
-        <a href="#" class="btn">Shop Now</a>
-    </div>
-
-</section>
-
-<script>
-const hamburger = document.getElementById("hamburger");
-const sideMenu = document.getElementById("sideMenu");
-const overlay = document.getElementById("overlay");
-
-function openMenu() {
-    sideMenu.classList.add("active");
-    overlay.classList.add("active");
-}
-
-function closeMenu() {
-    sideMenu.classList.remove("active");
-    overlay.classList.remove("active");
-}
-
-hamburger.addEventListener("click", openMenu);
-overlay.addEventListener("click", closeMenu);
-</script>
 
 </body>
 </html>
