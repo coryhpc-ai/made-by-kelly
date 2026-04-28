@@ -1,5 +1,5 @@
 /* ============================================= */
-/* HEADER.CSS - Fixed Height + No Expansion     */
+/* HEADER.CSS - Original Style + Mobile Burger  */
 /* ============================================= */
 
 .header {
@@ -8,10 +8,7 @@
     position: sticky;
     top: 0;
     z-index: 1000;
-    height: 68px;           /* Fixed height */
-    min-height: 68px;       /* Prevents growing */
-    overflow: hidden;       /* Important fix */
-    transition: all 0.3s ease;
+    height: 68px;
 }
 
 .header-content {
@@ -24,7 +21,7 @@
     justify-content: space-between;
 }
 
-/* Left & Right Navigation */
+/* Left & Right Navigation - Original */
 .left-nav,
 .right-nav {
     display: flex;
@@ -39,7 +36,7 @@
     margin: 0;
 }
 
-/* Logo */
+/* Logo - Original */
 .logo {
     font-family: 'Playfair Display', Georgia, serif;
     font-size: 24px;
@@ -53,7 +50,7 @@
     color: #8fa88f;
 }
 
-/* Navigation Links */
+/* Navigation Links - Original */
 .nav-menu a {
     font-family: 'Inter', system-ui, sans-serif;
     font-size: 15px;
@@ -67,7 +64,7 @@
     color: #8fa88f;
 }
 
-/* Burger */
+/* Burger Menu */
 .burger-menu {
     display: none;
     flex-direction: column;
@@ -86,17 +83,16 @@
     transition: all 0.3s ease;
 }
 
-/* MOBILE MENU - Completely separate */
+/* Mobile Menu */
 .mobile-menu {
     display: none;
     background: #ffffff;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
     position: absolute;
     top: 68px;
     left: 0;
     width: 100%;
     z-index: 999;
-    padding-bottom: 30px;
 }
 
 .mobile-menu ul {
@@ -124,15 +120,19 @@
     transform: rotate(-45deg) translate(5px, -5px);
 }
 
-/* RESPONSIVE */
+/* ============================================= */
+/* RESPONSIVE - Mobile Only                     */
+/* ============================================= */
 @media (max-width: 992px) {
     .left-nav,
     .right-nav {
         display: none;
     }
+    
     .burger-menu {
         display: flex;
     }
+    
     .mobile-menu.active {
         display: block;
     }

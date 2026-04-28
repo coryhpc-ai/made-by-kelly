@@ -8,59 +8,54 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/hero.css">
     <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="css/footer.css">
 </head>
 <body>
 
     <!-- HEADER -->
-<header class="header">
-    <div class="header-content">
-        
-        <ul class="left-nav nav-menu">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="shop/shop.html">Shop</a></li>
-            <li><a href="bridesmaid-gifts.html">Bridesmaid Gifts</a></li>
-            <li><a href="gift-sets.html">Gift Sets</a></li>
-        </ul>
+    <header class="header">
+        <div class="header-content">
+            <ul class="left-nav nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop/shop.html">Shop</a></li>
+                <li><a href="bridesmaid-gifts.html">Bridesmaid Gifts</a></li>
+                <li><a href="gift-sets.html">Gift Sets</a></li>
+            </ul>
 
-        <a href="index.html" class="logo">
-            Made by <span>Kelly</span>
-        </a>
+            <a href="index.html" class="logo">
+                Made by <span>Kelly</span>
+            </a>
 
-        <ul class="right-nav nav-menu">
-            <li><a href="price-list.html">Price List</a></li>
-            <li><a href="customize.html">Customize</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
+            <ul class="right-nav nav-menu">
+                <li><a href="price-list.html">Price List</a></li>
+                <li><a href="customize.html">Customize</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
 
-        <!-- Burger -->
-        <button class="burger-menu" id="burger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-    </div>
+            <button class="burger-menu" id="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
 
-    <!-- Mobile Menu -->
-    <div class="mobile-menu" id="mobileMenu">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="shop/shop.html">Shop</a></li>
-            <li><a href="bridesmaid-gifts.html">Bridesmaid Gifts</a></li>
-            <li><a href="gift-sets.html">Gift Sets</a></li>
-            <li><a href="price-list.html">Price List</a></li>
-            <li><a href="customize.html">Customize</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </div>
-</header>
+        <div class="mobile-menu" id="mobileMenu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop/shop.html">Shop</a></li>
+                <li><a href="bridesmaid-gifts.html">Bridesmaid Gifts</a></li>
+                <li><a href="gift-sets.html">Gift Sets</a></li>
+                <li><a href="price-list.html">Price List</a></li>
+                <li><a href="customize.html">Customize</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </header>
 
     <!-- HERO SLIDESHOW -->
-    <section class="hero" id="hero">
+    <section class="hero">
         <div class="hero-slide active" style="background-image: url('images/slideshow/jennifer-kalenberg-3nx3qOwSSLs-unsplash.jpg');"></div>
         <div class="hero-slide" style="background-image: url('images/slideshow/jeremy-wong-weddings-464ps_nOflw-unsplash.jpg');"></div>
         <div class="hero-slide" style="background-image: url('images/slideshow/kelsey-chance-tAH2cA_BL5g-unsplash.jpg');"></div>
@@ -81,8 +76,7 @@
             <div class="hero-dot" data-slide="3"></div>
         </div>
     </section>
-
-    <!-- WHO WE ARE - WHITE -->
+    <!-- WHO WE ARE -->
     <div class="who-we-are">
         <div class="container">
             <h2>Who We Are</h2>
@@ -90,14 +84,13 @@
             <p>No project is too small and we’re open to your ideas. Any questions, please feel free to ask x</p>
         </div>
     </div>
-
-    <!-- BEST SELLERS - BEIGE -->
+    <!-- BEST SELLERS -->
     <section class="best-sellers">
         <div class="container">
             <div class="text-side">
                 <h2>Our Top Sellers</h2>
                 <p>Beautifully handcrafted and personalized gifts that brides and their parties love most. Each piece is made with care to create memories that last.</p>
-                <a href="shop.html" class="btn">View All Best Sellers</a>
+                <a href="shop/shop.html" class="btn">View All Best Sellers</a>
             </div>
 
             <div class="slider-container">
@@ -115,106 +108,31 @@
             </div>
         </div>
     </section>
+  <!-- TESTIMONIALS -->
+<section class="testimonials">
+    <div class="container">
+        <h2>What Our Customers Say</h2>
+        <p class="subtitle">Real feedback from happy customers • 100% Recommended</p>
 
-    <!-- TESTIMONIALS - WHITE -->
-    <section class="testimonials">
-        <div class="container">
-            <h2>What Our Customers Say</h2>
-            <p class="subtitle">Real feedback from happy customers • 100% Recommended</p>
+        <div class="testimonial-slider" id="testimonialSlider">
+            <div class="testimonial-card active">
+                <p class="review">"Just received my order and it’s absolutely gorgeous! Everything was perfect and exactly what I ordered. Communication was amazing by Kelly as I was a bit of a pain by keeping adding more and more to my order 🙈😅 but nothing was ever any trouble for her. Thank you very much, would highly recommend xx."</p>
+            </div>
 
-            <div class="testimonial-slider" id="testimonialSlider">
-                <div class="testimonial-card">
-                    <p class="review">"Just received my order and it’s absolutely gorgeous! Everything was perfect and exactly what I ordered. Communication was amazing by Kelly as I was a bit of a pain by keeping adding more and more to my order 🙈😅 but nothing was ever any trouble for her. Thank you very much, would highly recommend xx."</p>
-                </div>
+            <div class="testimonial-card">
+                <p class="review">"Just received my order, absolutely amazing, exactly what I ordered and great quality. Thank you we will be back for more xx"</p>
+            </div>
 
-                <div class="testimonial-card">
-                    <p class="review">"Just received my order, absolutely amazing, exactly what I ordered and great quality. Thank you we will be back for more xx"</p>
-                </div>
+            <div class="testimonial-card">
+                <p class="review">"Kelly is really lovely, great at communicating and clearly puts everything into making sure what she sends out is exactly what you want. I couldn’t be happier!"</p>
+            </div>
 
-                <div class="testimonial-card">
-                    <p class="review">"Kelly is really lovely, great at communicating and clearly puts everything into making sure what she sends out is exactly what you want. I was a little sceptical... but she put my mind at rest and she is very reliable and trustworthy. I couldn’t be happier!"</p>
-                </div>
-
-                <div class="testimonial-card">
-                    <p class="review">"I recently ordered some custom items for my daughter’s wedding, and I couldn’t be happier! Everything arrived beautifully wrapped... Thank you for helping make this special day even more perfect!"</p>
-                </div>
-
-                <div class="testimonial-card">
-                    <p class="review">"Just received my order and I am so pleased! The products are beautiful and will make a lovely addition to our big day. Would definitely recommend 🤍"</p>
-                </div>
-
-                <div class="testimonial-card">
-                    <p class="review">"I would 100% recommend Kelly she has been truly amazing because, I love everything she done and I keep adding more to my order because I can’t help myself, she so talented and I’m over the moon with all my stuff so thank you so much I really appreciate your hard work 😌😌❤️"</p>
-                </div>
-
-                <div class="testimonial-card">
-                    <p class="review">"Highly recommend- beautiful products x"</p>
-                </div>
-
-                <div class="testimonial-card">
-                    <p class="review">"Would just like to thank Kelly for making our day feel that little more exciting with the amazing personalised items she has made for our bridal team. Both me and my partner are over the moon and couldn’t recommend her more 🥰"</p>
-                </div>
-
-                <div class="testimonial-card">
-                    <p class="review">"I received my order from Kelly and was very pleased. The order was packaged well. The products were lovely and of good quality. I am looking at putting another order in when I've decided on what, it's hard because I want to order everything 😂"</p>
-                </div>
-
-                <div class="testimonial-card">
-                    <p class="review">"Kelly is such a wonderful communicator, received my items today and they are perfect!!!! Such a lovely lady. Pricing is affordable and her stuff is fab!!! Can’t wait to pop another order in !"</p>
-                </div>
+            <div class="testimonial-card">
+                <p class="review">"I recently ordered some custom items for my daughter’s wedding, and I couldn’t be happier!"</p>
             </div>
         </div>
-    </section>
-
-    <!-- STRIPE PAYMENT - BEIGE -->
-    <section class="stripe-payment">
-        <div class="container">
-            <h2>Secure Payment</h2>
-            <p class="subtitle">Once you've spoken with Kelly and agreed on your order, you can pay securely here with Stripe.</p>
-            
-            <div class="payment-options">
-                <div class="payment-card">
-                    <h3>Step 1: Chat with Kelly</h3>
-                    <p>Discuss your custom order and get a personalised quote.</p>
-                    <a href="https://wa.me/447305016480?text=Hi%20Kelly%2C%20I'd%20like%20to%20place%20an%20order" 
-                       class="whatsapp-btn" target="_blank">
-                        Message Kelly on WhatsApp
-                    </a>
-                </div>
-
-                <div class="payment-card">
-                    <h3>Step 2: Secure Payment</h3>
-                    <p>Pay safely with card via Stripe. No bank transfer needed.</p>
-                    <a href="https://buy.stripe.com/your-real-stripe-link-here" 
-                       class="stripe-btn">
-                        Pay Securely with Stripe
-                    </a>
-                    <div class="trust-badge">
-                        🔒 Powered by Stripe • Secure & Encrypted
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2026 Made by Kelly. All rights reserved.</p>
-            <p>
-                <a href="terms/terms.html">Terms & Conditions</a> • 
-                <a href="privacy.html">Privacy Policy</a>
-            </p>
-            <p class="made-with-love">Handcrafted with love in the UK ❤️</p>
-        </div>
-    </footer>
-
-    <!-- PLACE AN ORDER BUTTON -->
-    <a href="https://wa.me/447305016480?text=Hi%20Kelly%2C%20I%27d%20like%20to%20place%20an%20order" 
-       class="place-order-btn" 
-       target="_blank">
-        Place an Order
-    </a>
+    </div>
+</section>
 
     <script src="js/index.js"></script>
 </body>
